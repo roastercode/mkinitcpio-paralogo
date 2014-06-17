@@ -1,0 +1,7 @@
+#!/bin/sh
+
+run_earlyhook() {
+	source /etc/paralogo.conf
+	cd /usr/share/paralogo/
+	cat "${PARALOGO}"
+}

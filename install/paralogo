@@ -1,0 +1,17 @@
+#!/bin/sh
+
+build() {
+	source /etc/paralogo.conf
+	add_file /etc/paralogo.conf
+	add_file "/usr/share/paralogo/${PARALOGO}"
+	if add_systemd_unit paralogo.service 2>/dev/null; then
+		add_symlink "/usr/lib/systemd/system/sysinit.target.wants/paralogo.service" "../paralogo.service"
+	else
+		add_runscript
+	        systemctl enable paralogo.service
+	fi
+}
+
+help() {
+	echo "This hook adds an Parabola Linux logo to the boot process."
+}
