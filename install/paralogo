@@ -9,12 +9,19 @@ build() {
 	fi
 		add_runscript
 	        systemctl enable paralogo.service
-	
+}
+{
+        if 
+	       echo 'HOOK="paralogo"' > '/etc/mkinitcpio.conf'
+	fi
+}
+{
         if
 		echo ">>> Generating initial ramdisk, using mkinitcpio.  Please wait..."
-		mkinitcpio -p linux-libre      
+		mkinitcpio -p linux-libre
         fi
 }
+
 
 help() {
 	echo "This hook adds an Parabola Linux logo to the boot process."
