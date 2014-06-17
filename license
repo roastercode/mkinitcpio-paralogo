@@ -1,4 +1,5 @@
     mkinitcpio-paralogo is to had Parabola GNU / Linux-libre logo on boot system.
+    Aurélien DESBRIÈRES aurelien(at)hackers(dot)camp
 
     It is a fork (rewrited for Parabola GNU / Linux-libre)
     of https://aur.archlinux.org/packages/mkinitcpio-archlogo
