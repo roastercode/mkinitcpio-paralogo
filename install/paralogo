@@ -12,7 +12,7 @@ build() {
 }
 {
         if 
-	       echo 'HOOK="paralogo"' > '/etc/mkinitcpio.conf'
+	        sed -e 's|^_d_HOOKS=paralogo|_d_HOOKS=/etc/mkinitcpio.conf|'
 	fi
 }
 {
