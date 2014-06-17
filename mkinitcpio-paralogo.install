@@ -2,7 +2,7 @@
 
 post_install() {
 	echo " > Now add 'paralogo' to your HOOKS array in /etc/mkinitcpio.conf"
-	echo " > and rebuild initial ramdisk."
+	echo " > and rebuild initial ramdisk with # mkinitcpio -p linux-libre"
 	echo " > You can put your own artwork in /usr/share/paralogo/ and select"
 	echo " > a non-default one in /etc/paralogo.conf."
 }
