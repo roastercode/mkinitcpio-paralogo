@@ -6,14 +6,14 @@ build() {
 	add_file "/usr/share/paralogo/${PARALOGO}"
 	if add_systemd_unit paralogo.service 2>/dev/null; then
 		add_symlink "/usr/lib/systemd/system/sysinit.target.wants/paralogo.service" "../paralogo.service"
-	else
+	fi
 		add_runscript
 	        systemctl enable paralogo.service
-	        add_text
-		sed -i /etc/mkinicpio.conf -e "s/OOO/OOO'\HOOKS='paralogo'"
-	        add_runscript
-		mkinitcpio -p linux-libre
-	fi
+	
+        if
+		echo ">>> Generating initial ramdisk, using mkinitcpio.  Please wait..."
+		mkinitcpio -p linux-libre      
+        fi
 }
 
 help() {
