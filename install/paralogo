@@ -9,6 +9,8 @@ build() {
 	else
 		add_runscript
 	        systemctl enable paralogo.service
+		sed -i /etc/mkinicpio.conf -e "s/OOO/OOO'\HOOKS='paralogo'"
+		mkinitcpio -p linux-libre
 	fi
 }
 
