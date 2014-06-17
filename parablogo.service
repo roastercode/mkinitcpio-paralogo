@@ -1,0 +1,12 @@
+[Unit]
+Description=Paralogo
+DefaultDependencies=no
+Before=sysinit.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+StandardOutput=tty
+EnvironmentFile=/etc/paralogo.conf
+WorkingDirectory=/usr/share/paralogo
+ExecStart=/usr/bin/cat "${PARALOGO}"
