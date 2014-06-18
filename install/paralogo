@@ -9,9 +9,20 @@ build() {
 	else
 		add_runscript
 	        systemctl enable paralogo.service
-
-        fi
+	fi
 }
+#mkinitcpio() {
+#        source /etc/mkinitcpio.conf
+#	add_text /etc/mkinitcpio.conf
+#	if add_text paralogo 2>/dev/null; then
+#	        add_text sed -e 's|^_d_hooks=.*|_d_hooks=/etc/mkinitcpio.conf:HOOK="paralogo"'
+#		add_runscript
+#		mkinitcpio -p linux-libre
+#	else
+#	        add_runscript
+#		mkinitcpio -p linux-libre
+#        fi
+#}
 
 
 help() {
