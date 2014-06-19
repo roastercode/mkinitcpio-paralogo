@@ -39,8 +39,6 @@ package() {
 	# install logos
 	install -D -m0644 share/paralogo ${pkgdir}/usr/share/paralogo/paralogo
 	install -D -m0644 share/paralogo2 ${pkgdir}/usr/share/paralogo/paralogo2
-	install -D -m0644 share/paralogo2 ${pkgdir}/usr/share/paralogo/paralogo3
+	install -D -m0644 share/paralogo3 ${pkgdir}/usr/share/paralogo/paralogo3
 
 }
-
-sha256sums=('SKIP')
