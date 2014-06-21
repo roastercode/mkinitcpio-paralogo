@@ -41,5 +41,6 @@ package() {
 	install -D -m0644 share/paralogo2 ${pkgdir}/usr/share/paralogo/paralogo2
 	install -D -m0644 share/paralogo3 ${pkgdir}/usr/share/paralogo/paralogo3
 	install -D -m0644 share/paralogo4 ${pkgdir}/usr/share/paralogo/paralogo4
+	install -D -m0644 share/paralogo5 ${pkgdir}/usr/share/paralogo/paralogo5
 
 }
